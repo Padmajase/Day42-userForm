@@ -1,0 +1,13 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    width : 40vw;
+    border: 3PX solid rgb(37, 8, 180);
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(162, 162, 254);
+}
