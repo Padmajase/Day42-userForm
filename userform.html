@@ -65,7 +65,7 @@
             const passwordEntered = document.querySelector('#password');
             const passwordError = document.querySelector('.password-error');
             password.addEventListener('input', function() {
-                let passwordRegex = RegExp('^[[A-Za-z0-9]{8,}$');
+                let passwordRegex = RegExp('^[A-Za-z0-9]{8,}$');
                 if(passwordRegex.test(passwordEntered.value)) 
                 passwordError.textContent=" correct password ";
                 else passwordError.textContent="*enter valid password";
