@@ -61,6 +61,16 @@
                 else phoneError.textContent="*enter valid phone number";
                 
             });
+
+            const passwordEntered = document.querySelector('#password');
+            const passwordError = document.querySelector('.password-error');
+            password.addEventListener('input', function() {
+                let passwordRegex = RegExp('^[[A-Za-z0-9]{8,}$');
+                if(passwordRegex.test(passwordEntered.value)) 
+                passwordError.textContent=" correct password ";
+                else passwordError.textContent="*enter valid password";
+                
+            });
         </script>
 
         <script src="formScript.js"></script>
