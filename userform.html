@@ -14,8 +14,7 @@
             <email-output class="email-error"></email-output> <br><br>
             
             <label >enter phone : </label>
-            <input type="text" name="country code"  value="+91" size="2"/>
-            <input type="number" id="phone" name="phoneField" size="10"/>
+            <input type="number" id="phone" name="phoneField"/>
             <phone-output class="phone-error"></phone-output> <br><br>
             
             <label >enter password : </label>
@@ -23,7 +22,7 @@
             <password-output class="password-error"></password-output> <br><br>
 
 
-            <input id="submit" type="button" value="submit"/>
+            <input id="submit" type="button" value="submit"/><br><br>
             
                 
         </form>
@@ -35,7 +34,7 @@
             text.addEventListener('input', function() {
                 let nameRegex = RegExp('^[A-Za-z]{3,}$');
                 if(nameRegex.test(text.value)) 
-                    textError.textContent="name is correct";
+                    textError.textContent="";
                 else textError.textContent="*needed minimum 3 letters";
                 
             })
@@ -46,7 +45,7 @@
             email.addEventListener('input', function() {
                 let emailRegex = RegExp('^[a-zA-Z0-9_.-]+@+[a-zA-z0-9]+[.]+[comaunet]+$');
                 if(emailRegex.test(emailtext.value)) 
-                emailError.textContent="email is correct";
+                emailError.textContent="";
                 else emailError.textContent="*enter valid email";
                 
             });
@@ -55,9 +54,9 @@
             const phoneEntered = document.querySelector('#phone');
             const phoneError = document.querySelector('.phone-error');
             phone.addEventListener('input', function() {
-                let phoneRegex = RegExp('^[0-9]{10}$');
+                let phoneRegex = RegExp('^91+[1-9]{10}$');
                 if(phoneRegex.test(phoneEntered.value)) 
-                phoneError.textContent="phone number is correct";
+                phoneError.textContent="";
                 else phoneError.textContent="*enter valid phone number";
                 
             });
@@ -65,9 +64,9 @@
             const passwordEntered = document.querySelector('#password');
             const passwordError = document.querySelector('.password-error');
             password.addEventListener('input', function() {
-                let passwordRegex = RegExp('^[A-Za-z0-9]{8,}$');
+                let passwordRegex = RegExp('^[[A-Z]+[A-Za-z0-9][0-9]+[$%_#@-][A-Za-z0-9]]{8,}$');
                 if(passwordRegex.test(passwordEntered.value)) 
-                passwordError.textContent=" correct password ";
+                passwordError.textContent="";
                 else passwordError.textContent="*enter valid password";
                 
             });
